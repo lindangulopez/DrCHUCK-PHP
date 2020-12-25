@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://www.wa4e.com/lessons/php-fuctions -->
+<html lang="en" style="height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WA4E - Web Applications for Everybody</title>
+        <script>
+        var _TSUGI = {
+            context_title: "Web Applications for Everybody",
+            ajax_session: false,
+            heartbeat: 1500000,
+            heartbeat_url: "https://www.wa4e.com/tsugi/util/heartbeat?msec=1500000",
+            rest_path: {"parent":"","base_url":"https:\/\/www.wa4e.com","controller":"lessons","extra":"php-fuctions","action":"php-fuctions","parameters":[],"current":"\/lessons","full":"\/lessons\/php-fuctions"},
+            spinnerUrl: "https://static.tsugi.org/img/spinner.gif",
+            staticroot: "https://static.tsugi.org",
+            websocket_url: false,
+            websocket_token: false,
+            window_close_message: "Application complete",
+            session_expire_message: "Your session has expired"
+        }
+        </script>
+        <!-- Tiny bit of JS -->
+        <script src="./WA4E - Web Applications for Everybody_files/tsugiscripts_head.js.download"></script>
+        <!-- Le styles -->
+        <link href="./WA4E - Web Applications for Everybody_files/bootstrap.min.css" rel="stylesheet">
+        <link href="./WA4E - Web Applications for Everybody_files/jquery-ui.min.css" rel="stylesheet">
+                <link href="./WA4E - Web Applications for Everybody_files/all.css" rel="stylesheet">
+        <link href="./WA4E - Web Applications for Everybody_files/v4-shims.css" rel="stylesheet">
+        <style>:root {--primary:#0D47A1;--primary-menu:#0D47A1;--primary-border:#0d4295;--primary-darker:#0c4091;--primary-darkest:#0b3b85;--secondary:#EEEEEE;--secondary-menu:#EEEEEE;--text:#111111;--text-light:#5E5E5E;--background-color:#FFFFFF;--font-family:sans-serif;--font-size:14px;}</style>
+          <link href="./WA4E - Web Applications for Everybody_files/tsugi2.css" rel="stylesheet">
+
+          <style>
+                        </style>
+<style>
+a[target="_blank"]:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    content: " \f35d";
+}
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+    }
+body {
+    top: 0px !important;
+    }
+</style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/html5shiv/html5shiv.js"></script>
+          <script src="http://localhost/tsugi/vendor/tsugi/lib/static/js/respond/respond.min.js"></script>
+        <![endif]-->
+
+    <script type="text/javascript">CSRF_TOKEN = "TODORemoveThis";</script>
+
+<style>
+    .card {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 12px;
+    border: 1px solid black;
+    height: 9em;
+    overflow-y: hidden;
+}
+ .card div {
+    height: 8em;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+
+#loader {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      margin: 0;
+      z-index: 100;
+}
+</style>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./WA4E - Web Applications for Everybody_files/translateelement.css"><script type="text/javascript" charset="UTF-8" src="./WA4E - Web Applications for Everybody_files/main_fr.js.download"></script><script type="text/javascript" charset="UTF-8" src="./WA4E - Web Applications for Everybody_files/element_main.js.download"></script></head>
+<body prefix="oer: http://oerschema.org" style="padding-top: 5.93rem; position: relative; min-height: 100%; top: 0px;">
+<div id="body_container" class="container">
+<script>
+if (window!=window.top) {
+    document.getElementById("body_container").className = "container-fluid";
+} else {
+    document.getElementById("body_container").className = "container";
+}
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="tsugi_main_nav_bar" style="display: block;">  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.wa4e.com/">WA4E</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-main">
+        <li><a href="https://www.wa4e.com/install">Get Started</a></li>
+        <li><a href="https://www.wa4e.com/lessons">Lessons</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7FHbnXWviqQt0sKEK_hdKX" target="_blank">YouTube</a></li>
+        <li><a href="https://www.wa4e.com/assignments">Assignments</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.dr-chuck.com/" target="_blank">Instructor</a></li>
+        <li><a href="http://textbooks.opensuny.org/the-missing-link-an-introduction-to-web-development-and-programming/" target="_blank">Book</a></li>
+        <li class="dropdown">
+          <a href="https://www.wa4e.com/lessons/php-fuctions#" class="dropdown-toggle dropdown-img" data-toggle="dropdown"><img src="./WA4E - Web Applications for Everybody_files/unnamed.jpg" style="height: 2em;"> <span class="fa fa-caret-down" aria-hidden="true"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.wa4e.com/profile">Profile</a></li>
+            <li><a href="https://www.wa4e.com/map">Map</a></li>
+            <li><a href="https://www.wa4e.com/badges">Badges</a></li>
+            <li><a href="https://www.wa4e.com/materials">Materials</a></li>
+            <li><a href="https://www.class-central.com/mooc/7362/web-applications-for-everybody" target="_blank">Rate this course</a></li>
+            <li><a href="https://www.wa4e.com/privacy">Privacy</a></li>
+            <li><a href="https://www.wa4e.com/tsugi/settings">LMS Integration</a></li>
+            <li><a href="https://www.tsugicloud.org/" target="_blank">Free App Store</a></li>
+            <li><a href="https://www.wa4e.com/logout">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div> <!--/.nav-collapse -->
+  </div> <!--container -->
+</nav>
+<script>
+if ( ! inIframe() ) {
+  document.getElementById('tsugi_main_nav_bar').style.display = 'block';
+  document.getElementsByTagName('body')[0].style.paddingTop = '5.93rem';
+}
+</script>
+
+<div id="flashmessages"></div>
+<div class="container">
+<div typeof="oer:Lesson" style="padding-left: 5px; vertical-align: text-top;"><ul class="pager">
+<li class="previous"><a href="https://www.wa4e.com/lessons/php-arrays">← Previous</a></li>
+<li><a href="https://www.wa4e.com/lessons">All (7 / 22)</a></li><li class="next"><a href="https://www.wa4e.com/lessons/php-forms">→ Next</a></li>
+</ul></div>
+<h1 property="oer:name" class="tsugi-lessons-module-title">PHP Functions</h1>
+<p property="oer:description" class="tsugi-lessons-module-description">We look at functions in PHP language.</p>
+<ul>
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-videos"><p>Videos</p><ul class="tsugi-lessons-module-videos-ul">
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-video"><div id="7970c91c9b1c3fb758626d5cd80371b2" class="w3schools-overlay">
+  <div class="w3schools-overlay-content" style="background-color: black;">
+  <div class="youtube-player" data-id="qgVaMIXF5EQ"><div data-id="qgVaMIXF5EQ"><img src="./WA4E - Web Applications for Everybody_files/hqdefault.jpg"><div class="play"></div></div></div>
+  </div>
+</div>
+<a href="https://www.wa4e.com/lessons/php-fuctions#" onclick="document.getElementById(&#39;7970c91c9b1c3fb758626d5cd80371b2&#39;).style.display = &#39;block&#39;;">PHP Functions - Part 1</a>
+</li>
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-video"><div id="4630cfbde1f8d945a7d3411f233cf482" class="w3schools-overlay">
+  <div class="w3schools-overlay-content" style="background-color: black;">
+  <div class="youtube-player" data-id="1Msp1AGz_NU"><div data-id="1Msp1AGz_NU"><img src="./WA4E - Web Applications for Everybody_files/hqdefault(1).jpg"><div class="play"></div></div></div>
+  </div>
+</div>
+<a href="https://www.wa4e.com/lessons/php-fuctions#" onclick="document.getElementById(&#39;4630cfbde1f8d945a7d3411f233cf482&#39;).style.display = &#39;block&#39;;">PHP Functions - Part 2 - Scope and Modularity</a>
+</li>
+</ul></li>
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-slides"><p>Slides</p><ul class="tsugi-lessons-module-slides-ul">
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-slide"><span class="tsugi-lessons-module-slide-icon"></span><span class="tsugi-lessons-module-slide-link"><a href="https://www.wa4e.com/lectures/PHP-03-Functions.ppt" target="_blank" class="tsugi-lessons-link" typeof="oer:SupportingMaterial">PHP-03-Functions.ppt</a>
+</span>
+</li>
+</ul></li>
+<li typeof="SupportingMaterial">Chapters: 32</li>
+<li typeof="oer:assessment"><a href="https://www.wa4e.com/assn/crack/" target="_blank">Assignment Specification</a></li>
+<li typeof="oer:assessment"><a href="https://www.wa4e.com/solutions/crack/" target="_blank">Assignment Solution</a></li>
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-references"><p>References</p><ul class="tsugi-lessons-module-references-ul">
+<li typeof="oer:SupportingMaterial" class="tsugi-lessons-module-reference"><span class="tsugi-lessons-module-reference-icon"></span><span class="tsugi-lessons-module-reference-link"><a href="https://www.youtube.com/watch?v=opT6pIfyGUs" target="_blank" class="tsugi-lessons-link" typeof="oer:SupportingMaterial">Bruce Schnier: Building Cryptographic Systems</a>
+</span>
+</li>
+</ul></li>
+<li typeof="oer:assessment" class="tsugi-lessons-module-ltis">Tools:<ul class="tsugi-lessons-module-ltis-ul"> <!-- start of ltis -->
+<li class="tsugi-lessons-module-lti"><a href="https://www.wa4e.com/lessons_launch/php_03_func_quiz">Quiz: Functions</a></li>
+
+
+<li class="tsugi-lessons-module-lti"><a href="https://www.wa4e.com/lessons_launch/php_02_hash">Peer Graded: Reversing an MD5 Hash</a></li>
+
+
+</ul><!-- end of ltis -->
+</li></ul>
+
+</div>
+<script src="./WA4E - Web Applications for Everybody_files/jquery-1.11.3.js.download"></script>
+<script src="./WA4E - Web Applications for Everybody_files/bootstrap.min.js.download"></script>
+<script src="./WA4E - Web Applications for Everybody_files/jquery-ui.min.js.download"></script>
+<script src="./WA4E - Web Applications for Everybody_files/jquery.timeago-1.6.3.js.download"></script>
+<script src="./WA4E - Web Applications for Everybody_files/handlebars-v4.0.2.js.download"></script>
+<script src="./WA4E - Web Applications for Everybody_files/tmpl.min.js.download"></script>
+<script src="./WA4E - Web Applications for Everybody_files/tsugiscripts.js.download"></script>
+<script type="text/javascript">
+    HEARTBEAT_TIMEOUT = setTimeout(doHeartBeat, _TSUGI.heartbeat);
+    tsugiEmbedMenu();
+</script>
+<div id="google_translate_element" style="position: fixed; right: 1em; bottom: 0.25em;"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage" class="goog-te-gadget-simple" style="white-space: nowrap;"><img src="./WA4E - Web Applications for Everybody_files/cleardot.gif" class="goog-te-gadget-icon" alt="" style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;"><span style="vertical-align: middle;"><a aria-haspopup="true" class="goog-te-menu-value" href="javascript:void(0)"><span>Sélectionner une langue</span><img src="./WA4E - Web Applications for Everybody_files/cleardot.gif" alt="" width="1" height="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="./WA4E - Web Applications for Everybody_files/cleardot.gif" alt="" width="1" height="1"><span aria-hidden="true" style="color: rgb(155, 155, 155);">▼</span></a></span></div></div></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "en", layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, "google_translate_element");
+}
+</script><script type="text/javascript" src="./WA4E - Web Applications for Everybody_files/f.txt"></script>
+
+<p style="font-size: 75%; margin-top: 5em;">
+Copyright Creative Commons Attribution 3.0 - Charles R. Severance
+</p><script>
+// PHP VERSION 7.0 and 7.1 HACK
+// https://stackoverflow.com/questions/44980654/how-can-i-make-trans-sid-cookie-less-sessions-work-in-php-7-1
+$('a').each(function (x) {
+    var href = $(this).attr('href');
+    if ( ! href ) return;
+    if ( ! href.startsWith('#') ) return;
+    var pos = href.indexOf('/?');
+    if ( pos < 1 ) return;
+    console.dir('Patching broken # href='+href);
+    href = href.substring(0,pos);
+    $(this).attr('href', href);
+});
+
+</script>
+
+<script>
+$(document).ready(function() {
+    $('.w3schools-overlay').on('click', function(event) {
+        if ( event.target.id == event.currentTarget.id ) {
+            // Sop our embedded YouTube Players
+            labnolStopPlayers();
+            // https://stackoverflow.com/questions/4071872/html5-video-force-abort-of-buffering
+            // https://stackoverflow.com/a/34058996
+            $('.w3schools-overlay audio, video').each(function (i,e) {
+                    var tmp_src = this.src;
+                    var playtime = this.currentTime;
+                    this.src = '';
+                    this.load();
+                    this.src = tmp_src;
+                    this.currentTime = playtime;
+
+            });
+            event.target.style.display = 'none';
+        } else {
+            event.stopPropagation();
+        }
+    })
+});
+</script>
+<script src="./WA4E - Web Applications for Everybody_files/jquery.fitvids.js.download">
+</script>
+<script src="./WA4E - Web Applications for Everybody_files/jquery.bxslider.js.download">
+</script>
+<script>
+$(document).ready(function() {
+    $('.bxslider').bxSlider({
+        video: true,
+        useCSS: false,
+        adaptiveHeight: false,
+        slideWidth: "350px",
+        infiniteLoop: false,
+        maxSlides: 2
+    });
+});
+</script>
+
+
+</div><script src="./WA4E - Web Applications for Everybody_files/webcomponents-lite.js.download"></script><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./WA4E - Web Applications for Everybody_files/translate_24dp.png" width="20" height="20" alt="Google Traduction"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Texte d'origine</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Proposer une meilleure traduction</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><iframe frameborder="0" class="goog-te-menu-frame skiptranslate" title="Widget de traduction" style="visibility: visible; box-sizing: content-box; width: 1025px; height: 263px; left: 310.016px; top: 325.453px; display: none;" src="./WA4E - Web Applications for Everybody_files/saved_resource.html"></iframe></body></html>

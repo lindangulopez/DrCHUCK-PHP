@@ -13,3 +13,21 @@ Slides & Embedded Links
 - Elizabeth Fong: [Creating the SQL Database Standards](https://www.youtube.com/watch?v=rLUm3vst87g&feature=youtu.be)
 - http://dev.mysql.com/doc/refman/5.0/en/string-functions.html
 - http://dev.mysql.com/doc/refman/5.0/en/date-and-time-functions.html
+
+## SQL Queries Recap
+
+- DBA stands for Database Administrator
+- Structured Query Language (SQL) is used to {Create a table, Insert data, Delete data}
+- The statement  <<CREATE DATABASE people;>>  is a example of a syntax to make a new database using command line. 
+- <<INSERT INTO>> is the keyword used to insert data into tables.
+- <<WHERE>> is a keyword is used to add conditions to your query?
+- <<SELECT * FROM Users>> is a command is used to retrieve all records from the table?
+- <<ORDER BY>> will cause the results of the query to be displayed in sorted order?
+- The << LIMIT >>clause helps to narrow down the scope of the query.
+- A varchar column allocates a string with a variable amount of space depending on the data length that is actually stored.
+- A column of type CHAR can be indexed.
+- Images, PDF, movies can be stored in a database.
+- Column of type TIMESTAMP stores the number of seconds from January 1, 1970 in the column.
+- A primary key cannot be set to null.
+- An UNSIGNED int cannot be a negative number.
+- Primary keys are used to distinguish rows within in a table.Foreign keys are used to reference the primary key from a different table.

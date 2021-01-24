@@ -22,11 +22,11 @@ Metal
  
  `SELECT * FROM album`
   
- album_id     | title         |artist_id
+ album_id_____| title_________|artist_id
  
-1             |Who Made Who   |2
+1_____________|Who Made Who___|2
 
-2             |IV             |1
+2_____________|IV_____________|1
 
 
 _(iii) select the albums of each artist_
@@ -34,8 +34,10 @@ _(iii) select the albums of each artist_
 `SELECT name, title FROM artist
 JOIN album ON (artist.artist_id=album.album_id);`
 
-name        |title
+name__________|title
 
-Led Zepplin |Who Made Who
+Led Zepplin__|Who Made Who
 
-AC/DC       |IV
+AC/DC________|IV
+
+

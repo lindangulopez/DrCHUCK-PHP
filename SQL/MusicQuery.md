@@ -40,4 +40,21 @@ Led Zepplin__|Who Made Who
 
 AC/DC________|IV
 
+_(iv)  all of the genres for a particular artist_
+
+`SELECT * FROM genre JOIN artist ON(genre.genre_id=artist_id) WHERE artist.name="Led Zepplin"`
+
+genre_id________|name____________|artist_id____|name
+1_______________|Rock____________|1____________|Led Zepplin
+
+
+_(v)  all of the genres for a particular artist, neatened_
+
+`SELECT genre.name, artist.name FROM genre JOIN artist ON(genre.genre_id=artist_id) WHERE artist.name="Led Zepplin"`
+
+name_________|name
+Led Zepplin__|Rock
+
+
+
 

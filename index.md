@@ -11,5 +11,9 @@
 
 - Installing PHP and SQL
 - Introduction to Structured Query Language (SQL)
+
+![Sanity Check](https://github.com/lindangulopez/DrCHUCK-PHP-SQL-DB-APPS-JS/blob/main/SQL/sanity_check2.png?raw=true)
+
 - Database design with multiple tables, foreign keys, and the JOIN operation.
 - Model many-to-many relationships like those needed to represent users, roles, and courses.
+

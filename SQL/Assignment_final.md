@@ -121,9 +121,6 @@ ON User.user_id = Member.user_id AND Member.course_id = Course.course_id
 ORDER BY Course.title, Member.role DESC, User.name
 
 
-![Sanity Check](https://github.com/lindangulopez/DrCHUCK-PHP-SQL-DB-APPS-JS/blob/main/SQL/sanity_check.png?raw=true)
-
-
 /* Submitting Your Assignment
 When you have the data all inserted, use phpMyAdmin to Export the data as follows:
 

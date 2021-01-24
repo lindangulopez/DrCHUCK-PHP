@@ -9,9 +9,13 @@ _(i)  all the data joined up sorted in ascending order by the album title_
  ORDER BY Album.title ASC;`
  
  name
+ 
 Rock
+
 Rock
+
 Metal
+
 Metal
 
  _(ii) All the albums_
@@ -19,5 +23,19 @@ Metal
  `SELECT * FROM album`
   
  album_id     | title         |artist_id
+ 
 1             |Who Made Who   |2
+
 2             |IV             |1
+
+
+_(iii) select the albums of each artist_
+
+`SELECT name, title FROM artist
+JOIN album ON (artist.artist_id=album.album_id);`
+
+name        |title
+
+Led Zepplin |Who Made Who
+
+AC/DC       |IV

@@ -129,7 +129,7 @@ INSERT INTO Member (user_id, course_id, role) VALUES (3, 1, 0);
 
 INSERT INTO Member (user_id, course_id, role) VALUES (4, 1, 0);
 
-INSERT INTO Member (user_id, course_id, role) VALUES (5, 1, 1 );
+INSERT INTO Member (user_id, course_id, role) VALUES (5, 1, 0 );
 
 
 /*Aisha, si110, Instructor [6, Aisha]
@@ -169,9 +169,12 @@ INSERT INTO Member (user_id, course_id, role) VALUES (14, 3, 0);
 INSERT INTO Member (user_id, course_id, role) VALUES (15, 3, 0);
 
 
+/*SQL_QUERY*/
 
-
-
+SELECT User.name, Course.title, Member.role
+FROM User JOIN Member JOIN Course
+ON User.user_id = Member.user_id AND Member.course_id = Course.course_id
+ORDER BY Course.title, Member.role DESC, User.name
 
 
 

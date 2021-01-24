@@ -1,3 +1,5 @@
+![sanity check](https://github.com/lindangulopez/DrCHUCK-PHP-SQL-DB-APPS-JS/blob/main/SQL/sanity_check2.png?raw=true)
+
 /*Tables for the Assignment
 Create the following tables in a database named "roster". Make sure that your database and tables are named exactly as follows including matching case.*/
 

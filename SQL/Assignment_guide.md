@@ -177,8 +177,18 @@ ON User.user_id = Member.user_id AND Member.course_id = Course.course_id
 ORDER BY Course.title, Member.role DESC, User.name
 
 
+![Sanity Check](https://github.com/lindangulopez/DrCHUCK-PHP-SQL-DB-APPS-JS/blob/main/SQL/sanity_check.png?raw=true)
 
 
+/* Submitting Your Assignment
+When you have the data all inserted, use phpMyAdmin to Export the data as follows:
 
-
+Select the database (do not select a table within the database)
+Select the Export Tab
+Select "Custom - display all possible options"
+Select "Save output to a file"
+Set the format to JSON
+Do not select "pretty print" the output
+Leave everything else as default and run the export.
+*/
 

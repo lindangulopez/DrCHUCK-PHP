@@ -162,4 +162,55 @@ If the user has pressed the "Add" button and the data passes validation, you can
 INSERT statement.
 
 
+        $stmt = $pdo->prepare('INSERT INTO autos
+          (make, year, mileage) VALUES ( :mk, :yr, :mi)');
+        $stmt->execute(array(
+          ':mk' => $_POST['make'],
+          ':yr' => $_POST['year'],
+          ':mi' => $_POST['mileage'])
+        );
+ 
+ When you successfully add data to your database, you need to put out a green "success message:
+
+     Record inserted
+
+Once there are records in the database they should be shown below the form to add a new entry.
+
+Submitting Your Assignment
+
+## For this assignment you will hand in:
+
+    A screen shot (including the URL) of your login.php rejecting an account without an at-sign (@)
+    A screen shot of your error log showing correct messages for both a successful and failed login attempt.
+    A screen shot (with URL) of your autos.php showing 'Name parameter missing'
+    A screen shot (including the URL) of your autos.php with three vehicles in the list. At least one of the 
+    vehicles must have '<b>' in its make and it must be shown properly (i.e. the make should not be bold)
+    A screen shot (including the URL) of your autos.php showing the error message for a non-numeric year
+    A screen shot of your autos database table in a database tool showing at least three vehicles
+    Source code of login.php
+    Source code of autos.php
+
+Peer Grading
+
+Don't take off points for little mistakes. If they seem to have done the assignment give them full credit. 
+Feel free to make suggestions if there are small mistakes. Please keep your comments positive and useful. 
+If you do not take grading seriously, the instructors may delete your response and you will lose points.
+
+You need to grade a minimum of 2 peer assignments. You can grade up to 5 peer assignments if you like.
+Optional Challenges
+
+This section is entirely optional and is here in case you want to explore a bit more deeply and test your code skillz.
+
+Here are some possible improvements:
+
+    Always show the automobiles sorted by make regardless of the order they were entered into the application. Hint: use "ORDER BY".
+    Add an optional URL field to your tables and user interface. Validate the URL to make sure it starts with "http://" or "https://".
+    If the user enters a URL, in the list of autos, have the make be a clickable anchor tag that opens the image in a new window:
+
+          <a href="http://....jpg" >Ford</a>
+
+    Medium Difficulty: Use the PHP cURL library to do a GET to the image URL from within PHP and if the URL does not exist, 
+    issue an error message to the user and do not add the automobile.
+    
+    
 

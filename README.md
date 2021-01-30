@@ -20,4 +20,13 @@
 
 ![Sanity Check](https://github.com/lindangulopez/DrCHUCK-PHP-SQL-DB-APPS-JS/blob/main/SQL/sanity_check2.png?raw=true)
 
+## PHP_OOP - PDO - SQL Injection - 
+- Object oriented pattern in the PHP language
+- Connect to a MySQL using the Portable Data Objects (PDO) library 
+- Issue SQL commands in the the PHP language. 
+- Add data from forms 
+- Address a few security issues such as avoiding SQL Injection 
+- PDO Error handling.
+
+![PHP_OOP - PDO - SQL Injection - ](https://github.com/lindangulopez/DrCHUCK-PHP-SQL-DB-APPS-JS/blob/main/PHP/Overview/xkcd372.png?raw=true)
 

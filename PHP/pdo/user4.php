@@ -1,6 +1,7 @@
 <?php
 require_once "pdo.php";
 
+/* add user */
 if ( isset($_POST['name']) && isset($_POST['email']) 
      && isset($_POST['password'])) {
     $sql = "INSERT INTO users (name, email, password) 
@@ -12,6 +13,8 @@ if ( isset($_POST['name']) && isset($_POST['email'])
         ':email' => $_POST['email'],
         ':password' => $_POST['password']));
 }
+
+/* delete user */
 
 if ( isset($_POST['delete']) && isset($_POST['user_id']) ) {
     $sql = "DELETE FROM users WHERE user_id = :zip";
@@ -26,19 +29,22 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- MVC above, HTML below -->
 
+<!-- need to debug - can still add users, but delete form Kput -->
+
 <html>
 <head></head><body>
 
 <table border="1">
 
 <?php
-foreach ( $rows as $row ) {
+$stmt =$pdo->query("SELECT name, email, password, user_id FROM users ");
+while ( $row = $stmt->fetchAll(PDO::FETCH_ASSOC) ) {
     echo "<tr><td>";
-    echo($row['name']);
+    echo($row["name"]); //Notice: Undefined index: name in C:\MAMP\htdocs\PHP\pdo\user4.php on line 41
     echo("</td><td>");
-    echo($row['email']);
+    echo($row['email']); //Notice: Undefined index: email in C:\MAMP\htdocs\PHP\pdo\user4.php on line 43
     echo("</td><td>");
-    echo($row['password']);
+    echo($row['password']); //Notice: Undefined index: password in C:\MAMP\htdocs\PHP\pdo\user4.php on line 45
     echo("</td><td>");
     echo('<form method="post"><input type="hidden" ');
     echo('name="user_id" value="'.$row['user_id'].'">'."\n");
@@ -46,7 +52,10 @@ foreach ( $rows as $row ) {
     echo("\n</form>\n");
     echo("</td></tr>\n");
 }
+
+
 ?>
+
 </table>
 <p>Add A New User</p>
 <form method="post">

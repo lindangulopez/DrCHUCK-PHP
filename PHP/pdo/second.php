@@ -1,9 +1,10 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;port=8889;dbname=misc', 
+$pdo = new PDO('mysql:host=localhost;port=3306;dbname=misc', 
     'fred', 'zap');
 $stmt = $pdo->query("SELECT name, email, password FROM users");
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo '<table border="1">'."\n";
+while ($rows = $stmt->fetchAll(PDO::FETCH_ASSOC)){
+
+    echo '<table border="1">'."\n";
 foreach ( $rows as $row ) {
     echo "<tr><td>";
     echo($row['name']);
@@ -12,6 +13,7 @@ foreach ( $rows as $row ) {
     echo("</td><td>");
     echo($row['password']);
     echo("</td></tr>\n");
+}
 }
 echo "</table>\n";
 ?>

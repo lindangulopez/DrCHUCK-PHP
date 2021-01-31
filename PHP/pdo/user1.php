@@ -13,9 +13,14 @@ if ( isset($_POST['name']) && isset($_POST['email'])
         ':password' => $_POST['password']));
 }
 ?>
+
+<!-- MVC model view control panel above html below -->
+
 <html>
-<head></head><body>
+<head></head>
+<body>
 <p>Add A New User</p>
+
 <form method="post">
 <p>Name:
 <input type="text" name="name" size="40"></p>
@@ -25,4 +30,6 @@ if ( isset($_POST['name']) && isset($_POST['email'])
 <input type="password" name="password"></p>
 <p><input type="submit" value="Add New"/></p>
 </form>
+
 </body>
+</html>

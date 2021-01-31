@@ -14,21 +14,42 @@ if ( isset($_POST['name']) && isset($_POST['email'])
 }
 
 $stmt = $pdo->query("SELECT name, email, password FROM users");
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-<html>
-<head></head><body><table border="1">
-<?php
-foreach ( $rows as $row ) {
-    echo "<tr><td>";
-    echo($row['name']);
-    echo("</td><td>");
-    echo($row['email']);
-    echo("</td><td>");
-    echo($row['password']);
-    echo("</td></tr>\n");
+while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC)){
+    foreach ( $rows as $row ) {
+        echo "<tr><td>";
+        echo($row['name']);
+        echo("</td><td>");
+        echo($row['email']);
+        echo("</td><td>");
+        echo($row['password']);
+        echo("</td></tr>\n");
+    }
 }
 ?>
+
+<!-- end of MVC, html below -->
+
+<html>
+<head></head>
+
+<body>
+
+<table border="1">
+<?php
+$stmt = $pdo->query("SELECT name, email, password FROM users");
+while($rows = $stmt->fetchAll(PDO::FETCH_ASSOC)){
+    foreach ( $rows as $row ) {
+        echo "<tr><td>";
+        echo($row["name"]);
+        echo("</td><td>");
+        echo($row["email"]);
+        echo("</td><td>");
+        echo($row["password"]);
+        echo("</td></tr>\n");
+    }
+} 
+?>
+
 </table>
 <p>Add A New User</p>
 <form method="post">
@@ -40,4 +61,7 @@ foreach ( $rows as $row ) {
 <input type="password" name="password"></p>
 <p><input type="submit" value="Add New"/></p>
 </form>
+
 </body>
+
+</html>

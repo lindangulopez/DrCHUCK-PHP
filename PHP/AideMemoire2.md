@@ -87,34 +87,10 @@ When do session cookies expire?
 
 
 Where are non-session cookies stored?
-0 / 1 point
 
-In the memory of the PHP server
+        - On the hard drive of the user's computer
 
-In the cloud on a separate memcached server 
 
-On the hard drive of the PHP server
-
-In the database on the server
-
-On the hard drive of the user's computer
-Incorrect
-16.
-Question 16
-
-What is the typical session identifier?
-0 / 1 point
-
-The MD5 hash of the domain name of the server
-
-A large random number chosen by the server
-
-The number of seconds since January 1, 1970
-
-The MD5 hash of the user's email address
-
-A large random number chosen by the browser
-Incorrect
 
 
 If a browser does not support cookies, how can PHP maintain a session?

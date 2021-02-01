@@ -1,3 +1,17 @@
+/*  p' OR '1' = '1
+
+SELECT name FROM users WHERE email = :em AND password = :pw
+
+bool(false)
+*/
+
+/*
+123
+
+SELECT name FROM users WHERE email = :em AND password = :pw
+
+*/
+
 <?php
 require_once "pdo.php";
 

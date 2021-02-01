@@ -1,3 +1,16 @@
+/* p' OR '1' = '1
+
+SELECT name FROM users WHERE email = 'csev@umich.edu' AND password = 'p' OR '1' = '1'
+
+*/
+
+/*123
+
+ SELECT name FROM users WHERE email = 'csev@umich.edu' AND password = '123' 
+ 
+ */
+
+
 <?php
 require_once "pdo.php";
 
